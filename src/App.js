@@ -1,5 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import Dashboard from './components/dashboard/dashboard';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "../node_modules/chart.js/dist/chart";
+import "./bootstrap/css/bootstrap.css"
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -8,14 +12,16 @@ import {
 
 function App() {
   return (
+    
     <Router>
+      <Dashboard></Dashboard>
       <div className="App">
-        <Header/>
+        {/* <Header/> */}
         <Routes>
           <Route path='/' element></Route>
         </Routes>
       </div>
-      <Footer/>
+      {/* <Footer/> */}
     </Router>
     
   );
